@@ -11,7 +11,10 @@
 }(function ($) {
   'use strict'
   var init = function ($element, options) {
-    $element.select2(options)
+    $element.select2(Object.assign(options, {theme: "material"}))
+    $element.parent().find(".select2-selection__arrow")
+        .addClass("material-icons")
+        .html("arrow_drop_down");
   }
 
   var initHeavy = function ($element, options) {
@@ -45,7 +48,10 @@
       }
     }, options)
 
-    $element.select2(settings)
+    $element.select2(Object.assign(options, {theme: "material"}));
+    $element.parent().find(".select2-selection__arrow")
+        .addClass("material-icons")
+        .html("arrow_drop_down");
   }
 
   $.fn.djangoSelect2 = function (options) {

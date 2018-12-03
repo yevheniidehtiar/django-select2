@@ -75,6 +75,7 @@ class Select2Conf(AppConf):
     """
 
     CSS = '//cdnjs.cloudflare.com/ajax/libs/select2/{version}/css/select2.min.css'.format(version=LIB_VERSION)
+    THEME = 'css/material.css'
     """
     The URI for the Select2 CSS file. By default this points to the Cloudflare CDN.
 
